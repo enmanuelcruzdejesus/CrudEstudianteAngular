@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Estudiante List</h2>
+    <p>Use action to perform crud operations</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Matricula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiante of estudiantes">
+               <td>{{estudiante.id}}</td>
+               <td>{{estudiante.matricula}}</td>
+               <td>{{estudiante.nombre}}</td>
+               <td>{{estudiante.apellido}}</td>
+               <td>{{estudiante.telefono}}</td>
+               <td>
+                    <button  class="btn btn-primary" (click)="editEstudiante(estudiante)">Edit</button>
+                    <button  class="btn btn-warning" (click)="previewEstudiante(estudiante)">View</button>
+                    <button  class="btn btn-danger" (click)="deleteEstudiante(estudiante)">Delete</button>
+               </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success" (click)="addEstudiante()" >Agregar Estudiante</button>
+</div>
+

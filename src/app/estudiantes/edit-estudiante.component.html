@@ -1,0 +1,35 @@
+
+<div class="container">
+    <h1>New Estudiante</h1>
+    <form action="" method="POST" >
+       <div class="form-group">
+           <label for="id" class="control-label">Id</label>
+           <input type="text" id="id" name="id"  [(ngModel)] = "estudiante.id" class="col-md-5 form-control">
+       </div>
+       
+        <div class="form-group">
+           <label for="name" class="control-label">Matricula</label>
+           <input type="text" id="matricula" name="matricula"   [(ngModel)] = "estudiante.matricula" class="col-md-5 form-control" >      
+        </div>
+      
+        <div class="form-group">
+           <label for="desc" class="control-label">Nombre</label>
+           <input type="text" id="nombre" class="col-md-5 form-control" name="nombre" [(ngModel)]="estudiante.nombre">    
+        </div>
+   
+   
+        <div class="form-group">
+            <label for="price" class="control-label">Apellido</label>
+            <input type="text" id="apellido" class="col-md-5 form-control" name="apellido" [(ngModel)]="estudiante.apellido">    
+         </div>
+       
+        <div class="panel-footer">
+           <button class="btn btn-primary" (click)="save()">Save</button>    
+        </div>
+ 
+      
+      
+   </form>
+ </div>
+    
+
